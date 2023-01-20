@@ -1,12 +1,28 @@
-<%= link_to 'Back', posts_path, class: 'btn btn-secondary mb-3' %>
 <div class="row">
     <div class="col-md-3">
+        <%= link_to 'Back', posts_path, class: 'btn btn-secondary mb-3' %>
         <div class="card">
             <div class="card-body">
                 <h4 class="card-title">Editing post</h4>
                 <%= render 'form', post: @post %>
             </div>
         </div>
+    </div>
+    <div class="col-md-9">
+        <div class="mb-3">
+            <%= form_with(model: [@post, @paragraph]) do |form| %>
+                <%= form.hidden_field :element_type, value: 'paragraph' %>
+                <%= form.submit "Paragraph", class: 'btn btn-primary' %>
+            <% end %>
+        </div>
+        <% @post.elements.each do |element| %>
+            <% if element.persisted? %>
+                <%= form_with(model: [@post, element]) do |form| %>
+                    <%= form.text_area :content %>
+                    <%= form.submit "Save", class: 'btn btn-primary' %>
+                <% end %>
+            <% end %>
+        <% end %>
     </div>
 </div>
 
