@@ -5,11 +5,20 @@
             background-color: #f8f9fa;
         }
     }
-}
-
-.image {
-    text-align: center;
-    img {
-        max-width: 80%;
+    
+    .image {
+        text-align: center;
+        img {
+            max-width: 80%;
+        }
+    }
+    
+    .post-card {
+        .header-img {
+            width: 100%;
+            height: 100px;
+            background-size: cover;
+            background-position: center;
+        }
     }
 }
