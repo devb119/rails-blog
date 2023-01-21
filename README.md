@@ -1,24 +1,10 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Steps to run this project: (Recommended environment: [Paiza](https://paiza.cloud/))
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+1. git clone https://github.com/devb119/rails-blog.git
+2. cd rails-blog
+3. bundle install
+4. yarn install --check-files
+5. rake db:migrate
+6. rails s
