@@ -10,6 +10,14 @@ class Post < ApplicationRecord
   validates_presence_of :title, :description
   validates_length_of :description, within: 50..250
   
+  scope :published, -> do
+      where(published: true)
+  end
+  
+  scope :most_recently_published, -> do
+      order(published_at: :desc)
+  end
+  
   def should_generate_new_friendly_id?
       title_changed?
      
