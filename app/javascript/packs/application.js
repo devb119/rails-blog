@@ -22,6 +22,7 @@ require("@rails/actiontext")
 Trix.config.blockAttributes.heading1.tagName = "h3";
 
 import Sortable from 'sortablejs'
+import "controllers"
 
 import '../stylesheets/application'
 
