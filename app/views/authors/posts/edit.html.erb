@@ -8,23 +8,6 @@
             <div class="card-body">
                 <%= render 'form', post: @post %>
             </div>
-            <div class="card-footer">
-                 <% if @post.published? %>
-                  <a href="#"
-                    class='btn btn-secondary btn-block'
-                    data-reflex='click->PublisherReflex#unpublish'
-                    data-post-id='<%= @post.id %>'>
-                    Unpublish
-                  </a>
-                <% else %>
-                  <a href="#"
-                    class='btn btn-dark btn-block'
-                    data-reflex='click->PublisherReflex#publish'
-                    data-post-id='<%= @post.id %>'>
-                    Publish
-                  </a>
-                <% end %>
-            </div>
         </div>
     </div>
     <div class="col-md-8">
@@ -48,7 +31,6 @@
                     <span class="badge badge-primary mr-1">
                         Published
                     </span>
-                    <b>Published <%= time_ago_in_words(@post.published_at) %></b>
                 <% else %>
                     Unpublished
                 <% end %>
