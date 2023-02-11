@@ -1,3 +1,3 @@
 class ReadersController < ApplicationController
-    layout 'readers'
+  layout 'readers'
 end
