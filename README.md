@@ -7,4 +7,5 @@ Steps to run this project: (Recommended environment: [Paiza](https://paiza.cloud
 3. bundle install
 4. yarn install --check-files
 5. rake db:migrate
-6. rails s
+6. rails dev:cache
+7. rails s
